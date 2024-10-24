@@ -26,7 +26,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333;
+    background: linear-gradient(90deg, rgba(210, 37, 185, 1) 0%, rgba(57, 39, 159, 1) 100%);
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -57,7 +57,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, rgba(210, 37, 185, 1) 0%, rgba(57, 39, 159, 1) 100%);
-    padding: 25px 35px;
+    padding: 15px 35px;
     border-radius: 50px;
     color: white;
 }
@@ -592,6 +592,7 @@ body.dark-mode .menu a {
 /*---------------------------Contact-me--------------------------------------*/
 #contact {
     padding: 40px 0px;
+    margin-top: 40px;
 }
 
 .social-media-icon {
@@ -609,11 +610,14 @@ body.dark-mode .menu a {
 }
 
 .contact-col-1 {
-    width: 50%;
+    width: 60%;
 }
 
 .contact-col-1 h2 {
     font-size: 48px;
+    background: linear-gradient(90deg, rgba(122, 36, 155, 1) 0%, rgba(217, 126, 88, 1) 50%, rgba(177, 30, 110, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .mobile-no p {
@@ -635,11 +639,17 @@ body.dark-mode .menu a {
 
 .contact-col-1 img {
     width: 100%;
-    max-width: 500px;
+
+
 }
 
 .image-column {
     text-align: center;
+    width: 40%;
+}
+
+.image-column img {
+    border-radius: 40px;
 }
 
 .contact-col-1 button {
@@ -650,4 +660,12 @@ body.dark-mode .menu a {
     border: navajowhite;
     border-radius: 50px;
     border: 1px solid rgb(74, 38, 151);
+}
+
+.cont-div-peragraph i {
+
+    background: linear-gradient(90deg, rgba(203, 67, 255, 1) 8%, rgba(255, 148, 103, 1) 50%, rgba(255, 55, 164, 1) 92%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 48px;
 }
