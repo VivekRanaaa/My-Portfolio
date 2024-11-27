@@ -1,4 +1,4 @@
-ag//header-js
+//header-js
 // Dark mode functionality
 const darkModeToggle = document.getElementById("darkModeToggle");
 const body = document.body;
