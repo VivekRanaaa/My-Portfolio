@@ -1,4 +1,4 @@
-//header-js
+ag//header-js
 // Dark mode functionality
 const darkModeToggle = document.getElementById("darkModeToggle");
 const body = document.body;
@@ -124,7 +124,7 @@ buttons.forEach(button => {
     button.addEventListener('mouseleave', () => {
         ball.style.width = '50px';
         ball.style.height = '50px';
-        ball.style.backgroundColor = '#f76301c9'; // Revert to red after hovering the button
+        ball.style.backgroundColor = ' #e6497c'; // Revert to red after hovering the button
         innerBall.style.width = '20px'; // Reset inner ball size
         innerBall.style.height = '20px'; // Reset inner ball size
     });
