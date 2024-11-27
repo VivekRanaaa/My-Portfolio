@@ -19,6 +19,38 @@ body {
     margin: 0 auto;
     max-width: 1400px;
 }
+.ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #f76301c9;
+    border-radius: 50%;
+    pointer-events: none;
+    /* Disable interaction */
+    transform: translate(-50%, -50%);
+    /* Center the ball on cursor */
+    transition: all 0.1s ease;
+    /* Smooth movement and size changes */
+    z-index: 999;
+}
+
+.inner-ball {
+    position: absolute;
+    width: 20px;
+    /* Smaller size */
+    height: 20px;
+    /* Smaller size */
+    background-color: #ffd0b2fa;
+    /* Different color */
+    border-radius: 50%;
+    pointer-events: none;
+    /* Disable interaction */
+    transform: translate(-50%, -50%);
+    /* Center the inner ball */
+    transition: all 0.3.9s ease;
+    /* Smooth movement */
+    z-index: 9999;
+}
 
 /*----------back-to-top------------------------*/
 /* Back to Top Button Styles */
