@@ -78,3 +78,55 @@ backToTopButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+/*-----------------------------BALL_JS_START----------------------------------------------------*/
+
+const ball = document.querySelector('.ball');
+const innerBall = document.querySelector('.inner-ball'); // Select the inner ball
+const buttons = document.querySelectorAll('button,a,img'); // Select all buttons
+let ballX = 0, ballY = 0;
+let mouseX = 0, mouseY = 0;
+let delay = 1; // This controls the delay factor
+
+// Listen for mouse movement and update mouseX, mouseY
+document.addEventListener('mousemove', function(e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+});
+
+// Function to move the ball and inner ball with delay (lerping effect)
+function moveBalls() {
+    ballX += (mouseX - ballX) * delay;
+    ballY += (mouseY - ballY) * delay;
+
+    ball.style.left = `${ballX}px`;
+    ball.style.top = `${ballY}px`;
+
+    innerBall.style.left = `${ballX}px`; // Move inner ball with the outer ball
+    innerBall.style.top = `${ballY}px`;
+
+    requestAnimationFrame(moveBalls); // Keep the loop going
+}
+
+moveBalls(); // Start the movement loop
+
+// Apply hover effect to all buttons
+buttons.forEach(button => {
+    // Button hover event to increase outer ball size and change color
+    button.addEventListener('mouseenter', () => {
+        ball.style.width = '100px';
+        ball.style.height = '100px';
+        ball.style.backgroundColor = '#f763017a'; // Change color when hovering the button
+        innerBall.style.width = '20px'; // Change inner ball size
+        innerBall.style.height = '20px'; // Change inner ball size
+    });
+
+    // Reset outer ball size and color when the mouse leaves the button
+    button.addEventListener('mouseleave', () => {
+        ball.style.width = '50px';
+        ball.style.height = '50px';
+        ball.style.backgroundColor = '#f76301c9'; // Revert to red after hovering the button
+        innerBall.style.width = '20px'; // Reset inner ball size
+        innerBall.style.height = '20px'; // Reset inner ball size
+    });
+});
+/*-----------------------------BALL_JS_END----------------------------------------------------*/
