@@ -23,7 +23,7 @@ body {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #7b009594;
+    background-color: ;
     border-radius: 50%;
     pointer-events: none;
     /* Disable interaction */
@@ -40,7 +40,7 @@ body {
     /* Smaller size */
     height: 20px;
     /* Smaller size */
-    background-color: #ffd0b2fa;
+    background-color: #7b009594;
     /* Different color */
     border-radius: 50%;
     pointer-events: none;
